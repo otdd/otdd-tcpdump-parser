@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.otdd.otddserver";
+option java_outer_classname = "OtddServerProto";
+
+package otddserver;
+
+service OtddServerService{
+        rpc SaveTestCase (SaveTestCaseReq) returns (SaveTestCaseResp) {}
+}
+
+message SaveTestCaseReq {
+        string testCase = 1;
+}
+
+message SaveTestCaseResp {
+        bool result = 1;
+}
